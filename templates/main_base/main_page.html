@@ -1,0 +1,32 @@
+{% extends "main_base/base.html" %}
+
+{% block left_col %}
+{% endblock %}
+
+{% block main %}
+                <h1> Лента Постов: </h1>
+
+                {% for i in post_list %}
+                <div style="display: grid; grid-template-rows: auto; grid-template-columns: auto;
+                     border-radius: 40px; background: #ffffff; margin: 30px;">
+<!--                Блок заголовка-->
+                    <div>
+                        <h1> {{ i.title }} </h1>
+                    </div>
+
+<!--                Блок содержания-->
+                    <div style="margin: 30px;">
+                        <p> {{ i.description }} </p>
+                    </div>
+
+<!--                Блок подвала информации-->
+                    <div style="display: grid; grid-template-rows: auto; grid-template-columns: 50% 50%;">
+                        <div><p style="font-weight: bold;"> Дата создания: </p><p> {{ i.date_of_creation }} </p></div>
+                        <div><p style="font-weight: bold;"> Автор:         </p><p> {{ i.users.username }}   </p></div>
+                    </div>
+                </div>
+                {% endfor %}
+{% endblock %}
+
+{% block right_col %}
+{% endblock %}
