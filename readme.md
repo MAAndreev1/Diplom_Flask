@@ -15,8 +15,8 @@
 * SQLAlchemy==2.0.36
 * typing_extensions==4.12.2
 * Werkzeug==3.1.2
-
-
+  
+![image](https://github.com/user-attachments/assets/789f12f4-6be1-4f8d-a75e-75ef6a90ba43)
 
 ## Возможности:
 
@@ -31,13 +31,12 @@
 
    * Хранение пользовательской информации в базе данных.
 
-
-
+   ![image](https://github.com/user-attachments/assets/c4dc6b72-0471-472c-a2cb-2f2244024263)
    
 ### 2. Посты:
    * Хранение постов в базе данных;
   
-
+   ![image](https://github.com/user-attachments/assets/3ca2482a-56dd-4454-b0fc-e6f9e67b5443)
 
    * Связь пользователя с постом (один к многим).
 ### 3. Стена:
