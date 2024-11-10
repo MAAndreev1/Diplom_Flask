@@ -14,7 +14,3 @@ class Posts(Base):
     user_id = Column(Integer, ForeignKey('users.id'), nullable=True)
 
     users = relationship('Users')
-
-if __name__ == '__main__':
-    from sqlalchemy.schema import CreateTable
-    print(CreateTable(Posts.__table__))

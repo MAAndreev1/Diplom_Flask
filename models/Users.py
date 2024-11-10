@@ -12,8 +12,3 @@ class Users(Base):
     password = Column(String)
 
     posts = relationship('Posts')
-
-
-if __name__ == '__main__':
-    from sqlalchemy.schema import CreateTable
-    print(CreateTable(Users.__table__))

@@ -16,7 +16,12 @@ app.secret_key = 'my-secret-key'
 
 @app.route('/', methods=['post', 'get'])
 def login():
-
+    """
+        Данная функция обрабатывает запросы для страницы авторизации.
+        Она обрабатывает GET и POST запросы.
+        GET - возвращает шаблон страницы авторизации.
+        POST - проверяет отправленные на авторизацию данные пользователя с базой данных.
+    """
     with SessionLocal() as db:
         info = {}
 
@@ -59,7 +64,12 @@ def login():
 
 @app.route('/registration/', methods=['post', 'get'])
 def registration():
-
+    """
+        Данная функция обрабатывает запросы для страницы регистрации.
+        Она обрабатывает GET и POST запросы.
+        GET - возвращает шаблон страницы регистрации.
+        POST - проверяет отправленные на регистрацию данные пользователя на корректность.
+    """
     with SessionLocal() as db:
         info = {}
 
@@ -103,7 +113,11 @@ def registration():
 
 @app.route('/main_page/', methods=['post', 'get'])
 def main_page():
-
+    """
+        Данная функция обрабатывает запросы для главной страницы.
+        Она обрабатывает GET запрос.
+        GET - возвращает шаблон главной страницы.
+    """
     with SessionLocal() as db:
 
         # Если GET
@@ -128,7 +142,12 @@ def main_page():
 
 @app.route('/your_profile/', methods=['post', 'get'])
 def your_profile():
-
+    """
+        Данная функция обрабатывает запросы для страницы профиля.
+        Она обрабатывает GET и POST запросы.
+        GET - возвращает шаблон страницы профиля.
+        POST - используется для удаления постов (получает id поста из POST запроса).
+    """
     with SessionLocal() as db:
 
         # Если GET
@@ -159,7 +178,12 @@ def your_profile():
 
 @app.route('/your_profile/create_post/', methods=['post', 'get'])
 def create_post():
-
+    """
+        Данная функция обрабатывает запросы для страницы создания постов.
+        Она обрабатывает GET и POST запросы.
+        GET - возвращает шаблон страницы создания постов.
+        POST - использует отправленные данные для создания постов.
+    """
     with SessionLocal() as db:
         info = {}
 
